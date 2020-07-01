@@ -14,9 +14,18 @@
 Route::get('/welcome', function () {
     return view('welcome1');
 });
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
 Route::get('/home', 'HomeController@home');
 Route::get('/register', 'AuthController@register');
 Route::post('/welcome1', 'AuthController@welcome1_post');
+Route::get('/master', function(){
+    return view('adminlte.master');
+});
+Route::get('/', function(){
+    return view('content.tabel');
+});
+Route::get('/data-tables', function(){
+    return view('content.data_tabel');
+});
